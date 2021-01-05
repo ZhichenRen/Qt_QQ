@@ -96,7 +96,7 @@ Widget::Widget(QWidget *parent) :
     connect(b,SIGNAL(triggered(bool)),this,SLOT(bg()));
     ui->messageTextEdit->installEventFilter(this);//回车键发消息监听
     setWindowFlags(Qt::FramelessWindowHint | Qt::WindowSystemMenuHint | Qt::WindowMinMaxButtonsHint);//任务栏使程序最小化
-    QFile file("messageList.txt");
+    QFile file("../messageList.txt");
     file.open(QIODevice::ReadOnly);
     QTextStream in(&file);
     while(!in.atEnd())
@@ -432,7 +432,7 @@ void Widget::on_saveToolButton_clicked()
     } else {
 //        QString fileName = QFileDialog::getSaveFileName(this,
 //                                                        tr("保存聊天记录"), tr("聊天记录"), tr("文本(*.txt);;All File(*.*)"));
-        QString fileName = "messageList.txt";
+        QString fileName = "../messageList.txt";
         if(!fileName.isEmpty())
             saveFile(fileName);
     }

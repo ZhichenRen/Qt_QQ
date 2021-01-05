@@ -5,8 +5,8 @@
 
 #include <QTextCharFormat>
 
-#include <windows.h>//shadow
-#include <windowsx.h>
+//#include <windows.h>//shadow
+//#include <windowsx.h>
 #include <QtGui>
 #include <QItemDelegate>
 #include <QStyledItemDelegate>
