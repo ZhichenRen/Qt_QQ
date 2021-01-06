@@ -72,6 +72,8 @@ private slots:
     void getFileName(QString);
     void on_sendButton_clicked();
     void on_sendToolButton_clicked();
+    void on_checkMessageButton_clicked();
+    void on_searchButton_clicked();
     void on_fontComboBox_currentFontChanged(const QFont &f);
     void on_sizeComboBox_currentIndexChanged(QString);
     void on_boldToolButton_clicked(bool checked);

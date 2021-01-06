@@ -1,5 +1,6 @@
 #include "widget.h"
 #include "ui_widget.h"
+#include "MessageFinder.h"
 #include<QDebug>
 
 #include<QUdpSocket>
@@ -96,6 +97,8 @@ Widget::Widget(QWidget *parent) :
     connect(b,SIGNAL(triggered(bool)),this,SLOT(bg()));
     ui->messageTextEdit->installEventFilter(this);//回车键发消息监听
     setWindowFlags(Qt::FramelessWindowHint | Qt::WindowSystemMenuHint | Qt::WindowMinMaxButtonsHint);//任务栏使程序最小化
+
+    ui->username->setText(getUserName());
     QFile file("../messageList.txt");
     file.open(QIODevice::ReadOnly);
     QTextStream in(&file);
@@ -115,7 +118,7 @@ Widget::Widget(QWidget *parent) :
                 user = msgMap.find(key);
             }
             QString msg = in.readLine();
-            QString value = list[1] + ' ' + msg;
+            QString value = line + "<br>" + msg;
             user.value()<<value;
             ui->messageBrowser->insertPlainText(msg);
             ui->messageBrowser->insertPlainText("\n");
@@ -150,16 +153,16 @@ void Widget::sendMessage(MessageType type,QString serverAddress)
         QString msg = getPlainMessage();
         out<<address<<getMessage()<<msg;
         ui->messageBrowser->verticalScrollBar()->setValue(ui->messageBrowser->verticalScrollBar()->maximum());
-        QString key = "[" + localHostName + "]";
-        QString time = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss");
-        QString value = time + " " + msg;
-        auto user = msgMap.find(key);
-        if(user == msgMap.end())
-        {
-            msgMap.insert(key, QList<QString>());
-            user = msgMap.find(key);
-        }
-        user.value().append(value);
+//        QString key = "[" + localHostName + "]";
+//        QString time = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss");
+//        QString value = time + " " + msg;
+//        auto user = msgMap.find(key);
+//        if(user == msgMap.end())
+//        {
+//            msgMap.insert(key, QList<QString>());
+//            user = msgMap.find(key);
+//        }
+//        user.value().append(value);
         break;
     }
     case NewParticipant:
@@ -209,7 +212,7 @@ void Widget::processPendingDatagrams()
                 msgMap.insert(key, QList<QString>());
                 user = msgMap.find(key);
             }
-            QString value = time + " " + plainMsg;
+            QString value = "[" + userName + "]" + " " + time + "<br>" + plainMsg;
             qDebug()<<value;
             user.value().append(value);
             break;
@@ -349,8 +352,22 @@ void Widget::on_sendToolButton_clicked()
                        tr("请先从用户列表选择要传送的用户！"), QMessageBox::Ok);
         return;
     }
-//    server->show();
-//    server->initServer();
+    if(ui->userTableWidget->selectedItems()[0]->text() == getUserName())
+    {
+        return;
+    }
+    server->show();
+    server->initServer();
+}
+
+void Widget::on_checkMessageButton_clicked()
+{
+    if(ui->userTableWidget->selectedItems().isEmpty())
+    {
+        QMessageBox::warning(0, tr("选择用户"),
+                       tr("请先从用户列表选择要传送的用户！"), QMessageBox::Ok);
+        return;
+    }
     QString user = ui->userTableWidget->selectedItems()[0]->text();
     qDebug()<<user;
     QList<QString> msgs = msgMap.find("[" + user + "]").value();
@@ -358,11 +375,35 @@ void Widget::on_sendToolButton_clicked()
     {
         qDebug()<<"[" + user + "]"<<msgs[i];
     }
-    Messages messagesWindow(user, msgs);
-    messagesWindow.setWindowTitle(user + "'s message list");
+    Messages messagesWindow(msgs);
+    messagesWindow.setWindowTitle(user + "的消息记录");
     messagesWindow.exec();
-
 }
+
+void Widget::on_searchButton_clicked()
+{
+    if(ui->searchBox->toPlainText()=="")
+    {
+        return;
+    }
+    QString target = ui->searchBox->toPlainText();
+    MessageFinder messageFinder;
+    QList<QString> msgs;
+    for(auto msgList: msgMap)
+    {
+        for(auto msg:msgList)
+        {
+            if(messageFinder.KMP(target, msg))
+            {
+                msgs<<msg;
+            }
+        }
+    }
+    Messages messagesWindow(msgs);
+    messagesWindow.setWindowTitle("查找结果");
+    messagesWindow.exec();
+}
+
 //判断是否接收文件,对话框
 void Widget::hasPendingFile(QString userName, QString serverAddress,QString clientAddress, QString fileName)
 {
