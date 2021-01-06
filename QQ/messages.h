@@ -12,7 +12,7 @@ class Messages : public QDialog
     Q_OBJECT
 
 public:
-    explicit Messages(QString user, QList<QString> messages, QWidget *parent = nullptr);
+    explicit Messages(QList<QString> messages, QWidget *parent = nullptr);
     ~Messages();
 
 private:

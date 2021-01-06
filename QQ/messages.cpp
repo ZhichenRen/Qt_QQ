@@ -1,16 +1,15 @@
 #include "messages.h"
 #include "ui_messages.h"
 
-Messages::Messages(QString user, QList<QString> messages, QWidget *parent) :
+Messages::Messages(QList<QString> messages, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Messages),
-    msgs(messages),
-    user(user)
+    msgs(messages)
 {
     ui->setupUi(this);
     for(int i=0;i<msgs.length();i++)
     {
-        ui->messageBrowser->append("[" + user + "] " + msgs[i]);
+        ui->messageBrowser->append(msgs[i]);
     }
     connect(ui->okButton, SIGNAL(clicked()), this, SLOT(exit()));
 }
