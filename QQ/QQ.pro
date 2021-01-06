@@ -24,6 +24,7 @@ SOURCES += main.cpp\
     menupushbutton.cpp
 
 HEADERS  += widget.h \
+    MessageFinder.h \
     messages.h \
     tcpserver.h \
     tcpclient.h \
