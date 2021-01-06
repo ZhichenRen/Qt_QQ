@@ -38,4 +38,4 @@ FORMS    += widget.ui \
 RESOURCES += \
     images.qrc
 
-RC_FILE += myico.rc //添加图标
+RC_FILE += myico.rc
