@@ -12,6 +12,7 @@ Messages::Messages(QList<QString> messages, QWidget *parent) :
         ui->messageBrowser->append(msgs[i]);
     }
     connect(ui->okButton, SIGNAL(clicked()), this, SLOT(exit()));
+    this->setStyleSheet("background-image: ;QDialog {border-top-left-radius:15px;border-top-right-radius:5px;}");
 }
 
 void Messages::exit()

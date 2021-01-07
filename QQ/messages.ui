@@ -14,7 +14,7 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QDialog {background-image: url(:/images/background5.jpg);}</string>
+   <string notr="true">QDialog {border-radius: 15px;}</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
