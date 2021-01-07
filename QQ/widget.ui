@@ -59,7 +59,7 @@
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">QStackedWidget {background-image: url(:/images/background.jpg);}
+    <string notr="true">QStackedWidget {background-image: url(:/images/background5.jpg);}
 </string>
    </property>
    <property name="frameShape">
@@ -153,8 +153,8 @@
     <widget class="QPushButton" name="sendButton">
      <property name="geometry">
       <rect>
-       <x>400</x>
-       <y>462</y>
+       <x>410</x>
+       <y>450</y>
        <width>60</width>
        <height>25</height>
       </rect>
@@ -172,42 +172,22 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">QPushButton { background-color: rgb(50, 50, 50,200); border-radius: 3px; color: rgb(255, 255, 255); }
- QPushButton:hover { background-color: rgb(50, 50, 50,255);}
+      <string notr="true">QPushButton { background-color: rgb(255, 255, 255,0); border-radius: 3px; color: rgb(0, 0, 0); }
+ QPushButton:hover { background-color: rgb(255, 255, 255,0);}
 </string>
      </property>
      <property name="text">
-      <string>发送</string>
+      <string/>
      </property>
-    </widget>
-    <widget class="QPushButton" name="exitButton">
-     <property name="geometry">
-      <rect>
-       <x>330</x>
-       <y>462</y>
-       <width>60</width>
-       <height>25</height>
-      </rect>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/images/sendMessage.png</normaloff>:/images/sendMessage.png</iconset>
      </property>
-     <property name="minimumSize">
+     <property name="iconSize">
       <size>
-       <width>60</width>
-       <height>25</height>
+       <width>30</width>
+       <height>30</height>
       </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>103</width>
-       <height>41</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton { background-color: rgb(50, 50, 50,200); border-radius: 3px; color: rgb(255, 255, 255); }
- QPushButton:hover { background-color: rgb(50, 50, 50,255);}
-</string>
-     </property>
-     <property name="text">
-      <string>关闭</string>
      </property>
     </widget>
     <widget class="Line" name="line">
@@ -256,19 +236,19 @@
       <rect>
        <x>10</x>
        <y>350</y>
-       <width>155</width>
+       <width>120</width>
        <height>30</height>
       </rect>
      </property>
      <property name="minimumSize">
       <size>
-       <width>155</width>
+       <width>120</width>
        <height>30</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
-       <width>155</width>
+       <width>120</width>
        <height>30</height>
       </size>
      </property>
@@ -314,7 +294,7 @@ QComboBox::drop-down:hover { background-color: rgb(50, 50, 50,255);}</string>
     <widget class="QComboBox" name="sizeComboBox">
      <property name="geometry">
       <rect>
-       <x>180</x>
+       <x>140</x>
        <y>350</y>
        <width>45</width>
        <height>30</height>
@@ -444,9 +424,9 @@ QComboBox::drop-down:hover { background-color: rgb(50, 50, 50,255);}</string>
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
-       <x>240</x>
+       <x>190</x>
        <y>350</y>
-       <width>241</width>
+       <width>288</width>
        <height>32</height>
       </rect>
      </property>
@@ -476,8 +456,8 @@ QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
          <string>...</string>
         </property>
         <property name="icon">
-         <iconset resource="images.qrc">
-          <normaloff>:/images/bold.png</normaloff>:/images/bold.png</iconset>
+         <iconset resource="resource.qrc">
+          <normaloff>:/images/bold2.png</normaloff>:/images/bold2.png</iconset>
         </property>
         <property name="checkable">
          <bool>true</bool>
@@ -509,8 +489,8 @@ QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
          <string>...</string>
         </property>
         <property name="icon">
-         <iconset resource="images.qrc">
-          <normaloff>:/images/italic.png</normaloff>:/images/italic.png</iconset>
+         <iconset resource="resource.qrc">
+          <normaloff>:/images/italic3.png</normaloff>:/images/italic3.png</iconset>
         </property>
         <property name="checkable">
          <bool>true</bool>
@@ -542,8 +522,8 @@ QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
          <string>...</string>
         </property>
         <property name="icon">
-         <iconset resource="images.qrc">
-          <normaloff>:/images/under.png</normaloff>:/images/under.png</iconset>
+         <iconset resource="resource.qrc">
+          <normaloff>:/images/underline2.png</normaloff>:/images/underline2.png</iconset>
         </property>
         <property name="checkable">
          <bool>true</bool>
@@ -575,8 +555,8 @@ QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
          <string>...</string>
         </property>
         <property name="icon">
-         <iconset resource="images.qrc">
-          <normaloff>:/images/color.png</normaloff>:/images/color.png</iconset>
+         <iconset resource="resource.qrc">
+          <normaloff>:/images/color2.png</normaloff>:/images/color2.png</iconset>
         </property>
        </widget>
       </item>
@@ -605,8 +585,8 @@ QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
          <string>...</string>
         </property>
         <property name="icon">
-         <iconset resource="images.qrc">
-          <normaloff>:/images/send.png</normaloff>:/images/send.png</iconset>
+         <iconset resource="resource.qrc">
+          <normaloff>:/images/file.png</normaloff>:/images/file.png</iconset>
         </property>
        </widget>
       </item>
@@ -635,7 +615,7 @@ QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
          <string>...</string>
         </property>
         <property name="icon">
-         <iconset resource="images.qrc">
+         <iconset resource="resource.qrc">
           <normaloff>:/images/save.png</normaloff>:/images/save.png</iconset>
         </property>
        </widget>
@@ -665,7 +645,7 @@ QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
          <string>...</string>
         </property>
         <property name="icon">
-         <iconset resource="images.qrc">
+         <iconset resource="resource.qrc">
           <normaloff>:/images/clear.png</normaloff>:/images/clear.png</iconset>
         </property>
        </widget>
@@ -676,7 +656,7 @@ QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
          <string>...</string>
         </property>
         <property name="icon">
-         <iconset resource="images.qrc">
+         <iconset resource="resource.qrc">
           <normaloff>:/images/messageList.png</normaloff>:/images/messageList.png</iconset>
         </property>
        </widget>
@@ -703,9 +683,9 @@ QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>8</y>
-       <width>40</width>
-       <height>40</height>
+       <y>10</y>
+       <width>60</width>
+       <height>60</height>
       </rect>
      </property>
      <property name="sizePolicy">
@@ -716,8 +696,8 @@ QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
      </property>
      <property name="minimumSize">
       <size>
-       <width>40</width>
-       <height>40</height>
+       <width>60</width>
+       <height>60</height>
       </size>
      </property>
      <property name="styleSheet">
@@ -727,13 +707,13 @@ QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
       <string>...</string>
      </property>
      <property name="icon">
-      <iconset resource="images.qrc">
-       <normaloff>:/images/head.jpg</normaloff>:/images/head.jpg</iconset>
+      <iconset resource="resource.qrc">
+       <normaloff>:/images/avatar.jpg</normaloff>:/images/avatar.jpg</iconset>
      </property>
      <property name="iconSize">
       <size>
-       <width>40</width>
-       <height>40</height>
+       <width>60</width>
+       <height>60</height>
       </size>
      </property>
     </widget>
@@ -741,7 +721,7 @@ QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
      <property name="geometry">
       <rect>
        <x>80</x>
-       <y>30</y>
+       <y>40</y>
        <width>161</width>
        <height>16</height>
       </rect>
@@ -749,19 +729,19 @@ QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
      <property name="font">
       <font>
        <family>微软雅黑</family>
-       <pointsize>8</pointsize>
+       <pointsize>9</pointsize>
       </font>
      </property>
      <property name="text">
-      <string>Nothing is impossible！</string>
+      <string>超人竟在我身边</string>
      </property>
     </widget>
     <widget class="QLabel" name="username">
      <property name="geometry">
       <rect>
-       <x>62</x>
-       <y>5</y>
-       <width>100</width>
+       <x>80</x>
+       <y>10</y>
+       <width>141</width>
        <height>25</height>
       </rect>
      </property>
@@ -780,308 +760,11 @@ QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
      <property name="font">
       <font>
        <family>微软雅黑</family>
-       <pointsize>12</pointsize>
+       <pointsize>13</pointsize>
       </font>
      </property>
      <property name="text">
       <string>QQQQQQQ</string>
-     </property>
-    </widget>
-    <widget class="QWidget" name="layoutWidget">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>48</y>
-       <width>254</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QToolButton" name="toolButton">
-        <property name="minimumSize">
-         <size>
-          <width>30</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>30</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="toolTip">
-         <string>发起语音通话</string>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QToolButton { background-color: rgb(50, 50, 50,0); border-radius: 3px; color: rgb(255, 255, 255); }
-QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
-        </property>
-        <property name="text">
-         <string>...</string>
-        </property>
-        <property name="icon">
-         <iconset resource="images.qrc">
-          <normaloff>:/images/mcallphone.png</normaloff>:/images/mcallphone.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>30</width>
-          <height>30</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QToolButton" name="toolButton_2">
-        <property name="minimumSize">
-         <size>
-          <width>30</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>30</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="toolTip">
-         <string>发起视频通话</string>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QToolButton { background-color: rgb(50, 50, 50,0); border-radius: 3px; color: rgb(255, 255, 255); }
-QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
-        </property>
-        <property name="text">
-         <string>...</string>
-        </property>
-        <property name="icon">
-         <iconset resource="images.qrc">
-          <normaloff>:/images/video.png</normaloff>:/images/video.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>30</width>
-          <height>30</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QToolButton" name="toolButton_3">
-        <property name="minimumSize">
-         <size>
-          <width>30</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>30</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="toolTip">
-         <string>远程演示</string>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QToolButton { background-color: rgb(50, 50, 50,0); border-radius: 3px; color: rgb(255, 255, 255); }
-QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
-        </property>
-        <property name="text">
-         <string>...</string>
-        </property>
-        <property name="icon">
-         <iconset resource="images.qrc">
-          <normaloff>:/images/control.png</normaloff>:/images/control.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>30</width>
-          <height>30</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QToolButton" name="toolButton_4">
-        <property name="minimumSize">
-         <size>
-          <width>30</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>30</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="toolTip">
-         <string>传送文件</string>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QToolButton { background-color: rgb(50, 50, 50,0); border-radius: 3px; color: rgb(255, 255, 255); }
-QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
-        </property>
-        <property name="text">
-         <string>...</string>
-        </property>
-        <property name="icon">
-         <iconset resource="images.qrc">
-          <normaloff>:/images/file.png</normaloff>:/images/file.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>30</width>
-          <height>30</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QToolButton" name="toolButton_5">
-        <property name="minimumSize">
-         <size>
-          <width>30</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>30</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="toolTip">
-         <string>远程桌面</string>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QToolButton { background-color: rgb(50, 50, 50,0); border-radius: 3px; color: rgb(255, 255, 255); }
-QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
-        </property>
-        <property name="text">
-         <string>...</string>
-        </property>
-        <property name="icon">
-         <iconset resource="images.qrc">
-          <normaloff>:/images/table.png</normaloff>:/images/table.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>30</width>
-          <height>30</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QToolButton" name="toolButton_6">
-        <property name="minimumSize">
-         <size>
-          <width>30</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>30</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="toolTip">
-         <string>发起多人聊天</string>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QToolButton { background-color: rgb(50, 50, 50,0); border-radius: 3px; color: rgb(255, 255, 255); }
-QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
-        </property>
-        <property name="text">
-         <string>...</string>
-        </property>
-        <property name="icon">
-         <iconset resource="images.qrc">
-          <normaloff>:/images/people.png</normaloff>:/images/people.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>30</width>
-          <height>30</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QToolButton" name="toolButton_7">
-        <property name="minimumSize">
-         <size>
-          <width>30</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>30</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="toolTip">
-         <string>应用</string>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QToolButton { background-color: rgb(50, 50, 50,0); border-radius: 3px; color: rgb(255, 255, 255); }
-QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
-        </property>
-        <property name="text">
-         <string>...</string>
-        </property>
-        <property name="icon">
-         <iconset resource="images.qrc">
-          <normaloff>:/images/software.png</normaloff>:/images/software.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>30</width>
-          <height>30</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QPushButton" name="pushButton">
-     <property name="geometry">
-      <rect>
-       <x>59</x>
-       <y>30</y>
-       <width>16</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>16</width>
-       <height>16</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>16</width>
-       <height>16</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton { background-color: rgb(50, 50, 50,0); border-radius: 3px; color: rgb(255, 255, 255); }
-QPushButton:hover { background-color: rgb(50, 50, 50,255);}</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset resource="images.qrc">
-       <normaloff>:/images/star.png</normaloff>:/images/star.png</iconset>
      </property>
     </widget>
     <widget class="QLabel" name="userNumLabel">
@@ -1167,7 +850,7 @@ QPushButton:hover { background-color: rgb(50, 50, 50,255);}</string>
          <string/>
         </property>
         <property name="icon">
-         <iconset resource="images.qrc">
+         <iconset resource="resource.qrc">
           <normaloff>:/images/menu.png</normaloff>:/images/menu.png</iconset>
         </property>
        </widget>
@@ -1197,7 +880,7 @@ QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
          <string>...</string>
         </property>
         <property name="icon">
-         <iconset resource="images.qrc">
+         <iconset resource="resource.qrc">
           <normaloff>:/images/min.png</normaloff>:/images/min.png</iconset>
         </property>
        </widget>
@@ -1227,7 +910,7 @@ QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
          <string>...</string>
         </property>
         <property name="icon">
-         <iconset resource="images.qrc">
+         <iconset resource="resource.qrc">
           <normaloff>:/images/max.png</normaloff>:/images/max.png</iconset>
         </property>
        </widget>
@@ -1257,7 +940,7 @@ QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
          <string>...</string>
         </property>
         <property name="icon">
-         <iconset resource="images.qrc">
+         <iconset resource="resource.qrc">
           <normaloff>:/images/exit.png</normaloff>:/images/exit.png</iconset>
         </property>
        </widget>
@@ -1268,24 +951,62 @@ QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
      <property name="geometry">
       <rect>
        <x>489</x>
-       <y>172</y>
+       <y>122</y>
        <width>261</width>
-       <height>531</height>
+       <height>581</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QTableWidget" name="userTableWidget">
+       <widget class="QTextBrowser" name="textBrowser">
         <property name="minimumSize">
          <size>
-          <width>255</width>
-          <height>380</height>
+          <width>180</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>180</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>楷体</family>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTextEdit { background-color: rgb(255, 255, 255,0); border-radius: 3px;color: rgb(0, 0, 0);  }</string>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'楷体'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-weight:600;&quot;&gt; 用户列表：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="userTableWidget">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>254</width>
+          <height>480</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
           <width>255</width>
-          <height>380</height>
+          <height>580</height>
          </size>
         </property>
         <property name="font">
@@ -1379,28 +1100,71 @@ QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="verticalLayoutWidget_2">
+    <widget class="QWidget" name="horizontalLayoutWidget">
      <property name="geometry">
       <rect>
        <x>500</x>
        <y>80</y>
-       <width>231</width>
-       <height>125</height>
+       <width>241</width>
+       <height>41</height>
       </rect>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
-       <widget class="QTextEdit" name="searchBox"/>
+       <widget class="QTextEdit" name="searchBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>180</width>
+          <height>39</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>180</width>
+          <height>39</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTextEdit { background-color: rgb(255, 255, 255,0);border-width: 2px; border-radius: 3px;border-color: #BEBEBE; border-style: inset; }</string>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QPushButton" name="searchButton">
+        <property name="minimumSize">
+         <size>
+          <width>38</width>
+          <height>38</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>38</width>
+          <height>38</height>
+         </size>
+        </property>
         <property name="font">
          <font>
           <pointsize>12</pointsize>
          </font>
         </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton { background-color: rgb(255, 255, 255,0); border-radius: 3px; color: rgb(0, 0, 0); }
+ QPushButton:hover { background-color: rgb(255, 255, 255,0);}
+</string>
+        </property>
         <property name="text">
-         <string>搜索聊天记录</string>
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/images/search.png</normaloff>:/images/search.png</iconset>
         </property>
        </widget>
       </item>
@@ -1419,7 +1183,7 @@ QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="images.qrc"/>
+  <include location="resource.qrc"/>
  </resources>
  <connections/>
 </ui>

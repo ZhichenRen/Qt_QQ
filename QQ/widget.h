@@ -62,8 +62,8 @@ protected:
     void closeEvent(QCloseEvent *);
     void paintEvent(QPaintEvent *);//shadow
     bool eventFilter(QObject *obj, QEvent *event);
-    void slotContextMenu(QPoint);
-    void contextMenuEvent(QContextMenuEvent *event);
+//    void slotContextMenu(QPoint);
+//    void contextMenuEvent(QContextMenuEvent *event);
 //-----------------------------------------
 private slots:
     void processPendingDatagrams();
@@ -82,7 +82,6 @@ private slots:
     void on_exitButton_clicked();
     void on_saveToolButton_clicked();
     void on_clearToolButton_clicked();
-    //void on_messageTextEdit_textChanged();
     void on_closeButton_clicked();
     void on_minButton_clicked();
     void on_maxButton_clicked();
@@ -91,9 +90,6 @@ private slots:
     void bg2();
     void bg3();
     void bg4();
-
-    void on_userTableWidget_customContextMenuRequested(const QPoint &pos);
-    void showMessage(QString user);
 };
 
 class NoFocusDelegate : public QStyledItemDelegate

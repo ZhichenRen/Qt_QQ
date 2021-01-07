@@ -354,6 +354,8 @@ void Widget::on_sendToolButton_clicked()
     }
     if(ui->userTableWidget->selectedItems()[0]->text() == getUserName())
     {
+        QMessageBox::warning(0, tr("选择不合法"),
+                       tr("您不可以向自己发送文件！"), QMessageBox::Ok);
         return;
     }
     server->show();
@@ -386,7 +388,8 @@ void Widget::on_searchButton_clicked()
     {
         return;
     }
-    QString target = ui->searchBox->toPlainText();
+    QString target = ui->searchBox->toPlainText().trimmed();
+    ui->searchBox->clear();
     MessageFinder messageFinder;
     QList<QString> msgs;
     for(auto msgList: msgMap)
@@ -620,7 +623,7 @@ void Widget::bg4()
 }
 void Widget::bg()
 {
-    ui->stackedWidget->setStyleSheet("QStackedWidget {background-image: url(:/images/background.jpg);}");
+    ui->stackedWidget->setStyleSheet("QStackedWidget {background-image: url(:/images/aboutBG.jpg);}");
 }
 //----------------回车键发消息---------------------
 //void Widget::on_messageTextEdit_textChanged()
@@ -646,39 +649,3 @@ bool Widget::eventFilter(QObject *obj, QEvent *event)
 //QlineEdit直接用returnPressed()即可
 //connect(ui->lineEdit, SIGNAL(returnPressed()), ui->pushButton, SIGNAL(clicked()), Qt::UniqueConnection);
 //----------------------------------------------------------------------------
-
-
-void Widget::slotContextMenu(QPoint)
-{
-    QMenu *menu = new QMenu(this);
-    QAction *action = new QAction(tr("&Show message"), menu);
-    menu->addAction(action);
-    connect(action,SIGNAL(triggered(bool)),this,SLOT(showMessage("haha")));
-    menu->move(cursor().pos()); //让菜单显示的位置在鼠标的坐标上
-    menu->show();
-}
-
-void Widget::contextMenuEvent(QContextMenuEvent *event)
-{
-//    QMenu *menu = new QMenu(this);
-//    QAction *action = new QAction(tr("&Show message"), menu);
-//    menu->addAction(action);
-//    connect(action,SIGNAL(triggered(bool)),this,SLOT(showMessage("haha")));
-//    menu->move(cursor().pos()); //让菜单显示的位置在鼠标的坐标上
-//    menu->show();
-}
-
-void Widget::showMessage(QString user)
-{
-    qDebug()<<user;
-}
-
-void Widget::on_userTableWidget_customContextMenuRequested(const QPoint &pos)
-{
-    QMenu *menu = new QMenu(this);
-    QAction *action = new QAction(tr("&Show message"), menu);
-    menu->addAction(action);
-    connect(action,SIGNAL(triggered(bool)),this,SLOT(showMessage("haha")));
-    menu->move(cursor().pos()); //让菜单显示的位置在鼠标的坐标上
-    menu->show();
-}
