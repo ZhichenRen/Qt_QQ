@@ -36,6 +36,6 @@ FORMS    += widget.ui \
     tcpclient.ui
 
 RESOURCES += \
-    images.qrc
+    resource.qrc
 
 RC_FILE += myico.rc

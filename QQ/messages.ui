@@ -7,35 +7,79 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>300</height>
+    <height>500</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {background-image: url(:/images/background5.jpg);}</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QTextBrowser" name="messageBrowser"/>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_2"/>
-     </item>
-     <item>
-      <widget class="QPushButton" name="okButton">
-       <property name="text">
-        <string>OK</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout"/>
-     </item>
-    </layout>
+    <widget class="QTextBrowser" name="messageBrowser">
+     <property name="minimumSize">
+      <size>
+       <width>370</width>
+       <height>430</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>370</width>
+       <height>430</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTextEdit { background-color: rgb(255, 255, 255,0);border-width: 2px; border-radius: 3px;border-color: #BEBEBE; border-style: inset; }</string>
+     </property>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignHCenter">
+    <widget class="QPushButton" name="okButton">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton { background-color: rgb(50, 50, 50,0); border-radius: 3px; color: rgb(255, 255, 255); }
+QPushButton:hover { background-color: rgb(50, 50, 50,255);}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/images/ok.png</normaloff>:/images/ok.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>
