@@ -59,8 +59,10 @@
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">QStackedWidget {background-image: url(:/images/background5.jpg);}
-</string>
+    <string notr="true">QStackWidget
+{
+	border-radius:15px;
+}</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::NoFrame</enum>
@@ -652,6 +654,9 @@ QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
       </item>
       <item>
        <widget class="QToolButton" name="checkMessageButton">
+        <property name="toolTip">
+         <string>查看聊天记录</string>
+        </property>
         <property name="styleSheet">
          <string notr="true">QToolButton { background-color: rgb(50, 50, 50,0); border-radius: 3px; color: rgb(255, 255, 255); }
 QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
@@ -1142,6 +1147,9 @@ QToolButton:hover { background-color: rgb(50, 50, 50,255);}</string>
          <font>
           <pointsize>12</pointsize>
          </font>
+        </property>
+        <property name="toolTip">
+         <string>搜索聊天记录</string>
         </property>
         <property name="styleSheet">
          <string notr="true">QPushButton { background-color: rgb(50, 50, 50,0); border-radius: 3px; color: rgb(255, 255, 255); }

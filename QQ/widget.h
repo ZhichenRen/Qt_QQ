@@ -89,7 +89,6 @@ private slots:
     void bg1();
     void bg2();
     void bg3();
-    void bg4();
 };
 
 class NoFocusDelegate : public QStyledItemDelegate

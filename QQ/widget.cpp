@@ -80,20 +80,17 @@ Widget::Widget(QWidget *parent) :
 
     /* 显示菜单 */
     QMenu * menu = ui->menuButton->getmenu();
-    b1 = new QAction(QIcon(":/images/menu.png"), tr("&星球皮肤"), this);
-    b2 = new QAction(QIcon(":/images/menu.png"), tr("&绿草皮肤"), this);
-    b3 = new QAction(QIcon(":/images/menu.png"), tr("&唯美皮肤"), this);
-    b4 = new QAction(QIcon(":/images/menu.png"), tr("&秋季皮肤"), this);
+    b1 = new QAction(QIcon(":/images/menu.png"), tr("&图书馆"), this);
+    b2 = new QAction(QIcon(":/images/menu.png"), tr("&仰望星空"), this);
+    b3 = new QAction(QIcon(":/images/menu.png"), tr("&樱花大道"), this);
     b = new QAction(QIcon(":/images/menu.png"), tr("&原始皮肤"), this);
     menu->addAction(b1);
     menu->addAction(b2);
     menu->addAction(b3);
-    menu->addAction(b4);
     menu->addAction(b);
     connect(b1,SIGNAL(triggered(bool)),this,SLOT(bg1()));
     connect(b2,SIGNAL(triggered(bool)),this,SLOT(bg2()));
     connect(b3,SIGNAL(triggered(bool)),this,SLOT(bg3()));
-    connect(b4,SIGNAL(triggered(bool)),this,SLOT(bg4()));
     connect(b,SIGNAL(triggered(bool)),this,SLOT(bg()));
     ui->messageTextEdit->installEventFilter(this);//回车键发消息监听
     setWindowFlags(Qt::FramelessWindowHint | Qt::WindowSystemMenuHint | Qt::WindowMinMaxButtonsHint);//任务栏使程序最小化
@@ -607,23 +604,19 @@ void NoFocusDelegate::paint(QPainter* painter, const QStyleOptionViewItem & opti
 //----------------------------------------------------------
 void Widget::bg1()
 {
-    ui->stackedWidget->setStyleSheet("QStackedWidget {background-image: url(:/images/background1.jpg);}");
+    ui->stackedWidget->setStyleSheet("QStackedWidget {background-image: url(:/images/lib2.jpg);}");
 }
 void Widget::bg2()
 {
-    ui->stackedWidget->setStyleSheet("QStackedWidget {background-image: url(:/images/background2.jpg);}");
+    ui->stackedWidget->setStyleSheet("QStackedWidget {background-image: url(:/images/ywxk.jpg);}");
 }
 void Widget::bg3()
 {
-    ui->stackedWidget->setStyleSheet("QStackedWidget {background-image: url(:/images/background3.jpg);}");
-}
-void Widget::bg4()
-{
-    ui->stackedWidget->setStyleSheet("QStackedWidget {background-image: url(:/images/background4.jpg);}");
+    ui->stackedWidget->setStyleSheet("QStackedWidget {background-image: url(:/images/yhdd.jpg);}");
 }
 void Widget::bg()
 {
-    ui->stackedWidget->setStyleSheet("QStackedWidget {background-image: url(:/images/aboutBG.jpg);}");
+    ui->stackedWidget->setStyleSheet("");
 }
 //----------------回车键发消息---------------------
 //void Widget::on_messageTextEdit_textChanged()
