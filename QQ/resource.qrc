@@ -50,5 +50,8 @@
         <file>images/sendMessage.png</file>
         <file>images/underline2.png</file>
         <file>images/close.png</file>
+        <file>images/ok.png</file>
+        <file>images/userlist (1).png</file>
+        <file>images/userlist (2).png</file>
     </qresource>
 </RCC>
