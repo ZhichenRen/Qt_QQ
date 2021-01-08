@@ -16,6 +16,14 @@
 
 ![pic alt](./images/UDP_broadcast.png "UDP_broadcast")
 
+| 消息类型 |      用途      |
+| :-----: | :-----: |
+|   Msg    |  发送聊天消息  |
+| UsrEnter |   新用户加入   |
+| UsrLeft  | 用户退出聊天室 |
+| FileName |  传输的文件名  |
+|  Refuse  |  拒绝接收文件  |
+
 ### 传输文件功能的实现
 传输文件时，发送文件的一方是服务端，接收文件的一方是客户端，服务器在发送文件前首先利用UDP发送文件名，如果客户端拒接接收，则利用UDP返回拒绝应答；若客户端同意接收，则服务器会与客户端建立TCP连接，从而向客户端传送文件。
 <img src="./images/file_transfer.png" width=40%>
