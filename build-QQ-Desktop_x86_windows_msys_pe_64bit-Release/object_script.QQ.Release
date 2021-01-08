@@ -1,0 +1,12 @@
+release/main.o
+release/messages.o
+release/widget.o
+release/tcpserver.o
+release/tcpclient.o
+release/menupushbutton.o
+release/qrc_resource.o
+release/moc_widget.o
+release/moc_messages.o
+release/moc_tcpserver.o
+release/moc_tcpclient.o
+release/moc_menubutton.o
